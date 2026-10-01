@@ -18,6 +18,8 @@ jobs:
           node-version: '22.x'
 
       - name: Install dependencies and build frontend
+        env:
+          VITE_API_URL: https://repo-white-hat-backend-azure-aqbhdgeuekeehxbw.westus3-01.azurewebsites.net
         run: |
           cd frontend
           npm ci || npm install
